@@ -11,7 +11,7 @@ app_code = '38ef43ff3c704a7c8bc5f934185b3a3d' #这里替换为你购买的AppCod
 def recognize2():
     url_path = '/plant/recognize2'
 
-    with open("../pics/杜鹃.jpg", "rb") as image_file:
+    with open("./pics/杜鹃.jpeg", "rb") as image_file:
         img_base64 = base64.b64encode(image_file.read()).decode('ascii')
         body = {'img_base64': img_base64}
 
@@ -20,3 +20,4 @@ def recognize2():
         print(response.text)
 
     return
+recognize2()
